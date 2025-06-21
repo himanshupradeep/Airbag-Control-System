@@ -1,0 +1,108 @@
+/*@!Encoding:1252*/
+includes
+{
+  
+}
+
+variables
+{
+  message Engine_Message em;
+  message Gear_Message gm;
+  message Acc_Message acc;
+  message Seatbelt_Message sm;
+  message Central_Locking_System_Message cls;
+  message Crash_Message cr;
+  message Airbag_Message ab;
+}
+
+on envVar Env_Engine 
+{
+  em.Engine_Signal = @Env_Engine;
+  output(em);
+}
+
+on envVar Env_Acc
+{
+  if(@Airbag_System::Gear==1)
+  {
+    acc.Acc_Signal=getValue(this);
+    output(acc);
+  }
+}
+on envVar Env_Seatbelt
+{
+  if(getValue(this)==1)
+  {
+    sm.Seatbelt_Signal=0;
+    output (sm);
+  }
+  else
+  {
+    sm.Seatbelt_Signal=1;
+    output(sm);
+  }
+}
+
+on envVar Env_Central_Locking_System
+{
+  cls.Central_Locking_System_Signal=@Env_Central_Locking_System;
+  output(cls);
+}
+
+on sysvar Airbag_System::Gear
+{
+  if(@Env_Engine==1)
+  {
+    gm.Gear_Signal=@Airbag_System::Gear;
+    output(gm);
+  }
+}
+
+on envVar Env_Crash
+{
+  if(getValue(this)==1)
+  {
+    if((getValue(Env_Seatbelt)==1)&&(acc.Acc_Signal>40))
+    {
+      ab.Airbag_Signal=1;
+      output(ab);
+      write("Airbag is opened");
+    }
+    else
+      {
+      ab.Airbag_Signal=0;
+      output(ab);
+      write("Airbag is closed");
+    }
+  }
+}
+
+on message Acc_Message
+{
+  if(@Env_Acc>0)
+  {
+    if(getValue(Env_Seatbelt)==0)
+    {
+      sm.Seatbelt_Signal=1;
+      output(sm);
+      write("Please wear the seatbelt");
+    }
+    else
+    {
+      sm.Seatbelt_Signal=0;
+      output(sm);
+    }
+ }
+  if (@Env_Acc<=20)
+  {
+    @Env_Central_Locking_System=1;
+    cls.Central_Locking_System_Signal=1;
+    output(cls);
+  }
+  else
+   {
+    @Env_Central_Locking_System=0;
+    cls.Central_Locking_System_Signal=0;
+    output(cls);
+  }
+}

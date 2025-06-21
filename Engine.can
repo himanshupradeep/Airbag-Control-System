@@ -1,0 +1,33 @@
+/*@!Encoding:1252*/
+includes
+{
+  
+}
+
+variables
+{
+  message Engine_Message em;
+  
+}
+
+on start
+  {
+  @Airbag_System::Gear = 0;
+  write("Gear is in Nuetral position");
+}
+
+on envVar Env_Engine
+{
+  if (@Env_Engine==1)
+  {
+    em.Engine_Signal = getValue(this);  //@Env_Engine
+    output(em);
+    write("Engine is ON");
+  }
+  else
+  {
+    em.Engine_Signal=getValue(this);
+    output(em);
+    write("Engine is OFF");
+  }
+}

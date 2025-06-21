@@ -1,0 +1,76 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Seatbelt Gear Engine Crash_Sensor Central_Locking_System Airbag
+
+
+BO_ 352 Engine_Message: 1 Engine
+ SG_ Engine_Signal : 0|8@1+ (1,0) [0|1] ""  Airbag
+
+BO_ 336 Gear_Message: 1 Gear
+ SG_ Gear_Signal : 0|8@1+ (1,0) [0|2] ""  Airbag
+
+BO_ 320 Acc_Message: 1 Vector__XXX
+ SG_ Acc_Signal : 0|8@1+ (1,0) [0|200] ""  Central_Locking_System,Airbag
+
+BO_ 304 Crash_Message: 1 Crash_Sensor
+ SG_ Crash_Signal : 0|8@1+ (1,0) [0|1] ""  Airbag
+
+BO_ 288 Central_Locking_System_Message: 1 Central_Locking_System
+ SG_ Central_Locking_System_Signal : 0|8@1+ (1,0) [0|1] ""  Airbag
+
+BO_ 272 Seatbelt_Message: 1 Seatbelt
+ SG_ Seatbelt_Signal : 0|8@1+ (1,0) [0|1] ""  Airbag
+
+BO_ 256 Airbag_Message: 1 Airbag
+ SG_ Airbag_Signal : 0|8@1+ (1,0) [0|1] "" Vector__XXX
+
+
+
+EV_ Env_Seatbelt: 0 [0|1] "" 0 1 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ Env_Gear: 0 [0|2] "" 0 2 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ Env_Engine: 0 [0|1] "" 0 3 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ Env_Crash: 0 [0|1] "" 0 4 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ Env_Central_Locking_System: 0 [0|1] "" 0 5 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ Env_Acc: 0 [0|512] "" 0 6 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "CAN";
+

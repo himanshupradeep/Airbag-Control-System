@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<Panel Type="Vector.CANalyzer.Panels.PanelSerializer, Vector.CANalyzer.Panels.Serializer, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null">
+  <Object Type="Vector.CANalyzer.Panels.Runtime.Panel, Vector.CANalyzer.Panels.Common, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="Panel" Children="Controls" ControlName="Airbag">
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl4" ControlName="Switch/Indicator 3">
+      <Property Name="Name">SwitchControl4</Property>
+      <Property Name="Size">34, 44</Property>
+      <Property Name="Location">302, 177</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="ImageFile">C:\Users\Public\Documents\Vector\CANoe\Sample Configurations 18.3.118\CAN\CANSystemDemo\Panels\Bitmaps\ConsoleRadioOnOff.bmp</Property>
+      <Property Name="SymbolConfiguration">5;1;Airbag;;;Env_Seatbelt;1;;;-1;;;</Property>
+      <Property Name="TabIndex">28</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.TrackBarControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="TrackBarControl1" Children="Controls" ControlName="Track Bar">
+      <Property Name="Name">TrackBarControl1</Property>
+      <Property Name="Size">148, 47</Property>
+      <Property Name="Location">278, 80</Property>
+      <Property Name="Maximum">2</Property>
+      <Property Name="DisplayMinMax">True</Property>
+      <Property Name="LargeChange">2</Property>
+      <Property Name="LargeChangeDouble">2</Property>
+      <Property Name="MaximumDouble">2</Property>
+      <Property Name="SymbolConfiguration">5;16;Airbag_System;;;Gear;1;;;-1;;;</Property>
+      <Property Name="TabIndex">19</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl7" Children="Controls" ControlName="Static Text">
+      <Property Name="Name">StaticTextControl7</Property>
+      <Property Name="Size">79, 14</Property>
+      <Property Name="Location">44, 177</Property>
+      <Property Name="Font">Microsoft Sans Serif, 8.142858pt, style=Bold, Italic</Property>
+      <Property Name="Text">Crash Sensor</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="TextBoxControl2" Children="Controls" ControlName="Input/Output Box">
+      <Property Name="Name">TextBoxControl2</Property>
+      <Property Name="Size">180, 29</Property>
+      <Property Name="Location">8, 206</Property>
+      <Property Name="AlarmUpperTextColor">WindowText</Property>
+      <Property Name="ValueDecimalPlaces">0</Property>
+      <Property Name="AlarmLowerBkgColor">Salmon</Property>
+      <Property Name="ValueDisplay">Decimal</Property>
+      <Property Name="AlarmUpperBkgColor">IndianRed</Property>
+      <Property Name="AlarmLowerTextColor">WindowText</Property>
+      <Property Name="BoxFont">Microsoft Sans Serif, 8.142858pt, style=Bold, Italic</Property>
+      <Property Name="AlarmUpperFont">Microsoft Sans Serif, 8.142858pt, style=Bold, Italic</Property>
+      <Property Name="AlarmLowerFont">Microsoft Sans Serif, 8.142858pt, style=Bold, Italic</Property>
+      <Property Name="AlarmGeneralSettings">1;2;0;1</Property>
+      <Property Name="DisplayLabel">Left</Property>
+      <Property Name="TextFont">Microsoft Sans Serif, 8.142858pt, style=Bold, Italic</Property>
+      <Property Name="DescriptionText">Crash_Sensor:</Property>
+      <Property Name="DescriptionSize">77, 16</Property>
+      <Property Name="SymbolConfiguration">5;1;Airbag;;;Env_Crash;1;;;-1;;;</Property>
+      <Property Name="TabIndex">12</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl6" Children="Controls" ControlName="Static Text">
+      <Property Name="Name">StaticTextControl6</Property>
+      <Property Name="Size">41, 18</Property>
+      <Property Name="Location">560, 128</Property>
+      <Property Name="Font">Microsoft Sans Serif, 8.142858pt, style=Bold, Italic</Property>
+      <Property Name="Text">Airbag</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl3" ControlName="Switch/Indicator 2">
+      <Property Name="Name">SwitchControl3</Property>
+      <Property Name="Size">63, 158</Property>
+      <Property Name="Location">549, 150</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="ImageFile">Airbag.jpg</Property>
+      <Property Name="SymbolConfiguration">5;2;Airbag;Airbag;Airbag_Message;Airbag_Signal;1;CAN;;-1;;;</Property>
+      <Property Name="TabIndex">10</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl5" Children="Controls" ControlName="Static Text">
+      <Property Name="Name">StaticTextControl5</Property>
+      <Property Name="Size">30, 14</Property>
+      <Property Name="Location">436, 150</Property>
+      <Property Name="Font">Microsoft Sans Serif, 8.142858pt, style=Bold, Italic</Property>
+      <Property Name="Text">CLS</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl4" Children="Controls" ControlName="Static Text">
+      <Property Name="Name">StaticTextControl4</Property>
+      <Property Name="Size">32, 14</Property>
+      <Property Name="Location">328, 57</Property>
+      <Property Name="Font">Microsoft Sans Serif, 8.142858pt, style=Bold, Italic</Property>
+      <Property Name="Text">Gear</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl3" Children="Controls" ControlName="Static Text">
+      <Property Name="Name">StaticTextControl3</Property>
+      <Property Name="Size">72, 14</Property>
+      <Property Name="Location">549, 57</Property>
+      <Property Name="Font">Microsoft Sans Serif, 8.142858pt, style=Bold, Italic</Property>
+      <Property Name="Text">Acceleration</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl2" Children="Controls" ControlName="Static Text">
+      <Property Name="Name">StaticTextControl2</Property>
+      <Property Name="Size">50, 14</Property>
+      <Property Name="Location">292, 150</Property>
+      <Property Name="Font">Microsoft Sans Serif, 8.142858pt, style=Bold, Italic</Property>
+      <Property Name="Text">Seatbelt</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl1" Children="Controls" ControlName="Static Text">
+      <Property Name="Name">StaticTextControl1</Property>
+      <Property Name="Size">43, 14</Property>
+      <Property Name="Location">44, 76</Property>
+      <Property Name="Font">Microsoft Sans Serif, 8.142858pt, style=Bold, Italic</Property>
+      <Property Name="Text">Engine</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl2" ControlName="Switch/Indicator 2">
+      <Property Name="Name">SwitchControl2</Property>
+      <Property Name="Size">32, 41</Property>
+      <Property Name="Location">436, 179</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="ImageFile">C:\Users\Public\Documents\Vector\CANoe\Sample Configurations 18.3.118\CAN\CANSystemDemo\Panels\Bitmaps\ConsoleRadioOnOff.bmp</Property>
+      <Property Name="SymbolConfiguration">5;1;Airbag;;;Env_Central_Locking_System;1;;;-1;;;</Property>
+      <Property Name="TabIndex">4</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.TrackBarControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="TrackBarControl2" Children="Controls" ControlName="Track Bar 2">
+      <Property Name="Name">TrackBarControl2</Property>
+      <Property Name="Size">164, 47</Property>
+      <Property Name="Location">496, 87</Property>
+      <Property Name="Maximum">200</Property>
+      <Property Name="DisplayMinMax">True</Property>
+      <Property Name="MaximumDouble">200</Property>
+      <Property Name="SymbolConfiguration">5;1;Airbag;;;Env_Acc;1;;;-1;;;</Property>
+      <Property Name="TabIndex">2</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="TextBoxControl1" Children="Controls" ControlName="Input/Output Box">
+      <Property Name="Name">TextBoxControl1</Property>
+      <Property Name="Size">181, 29</Property>
+      <Property Name="Location">8, 105</Property>
+      <Property Name="AlarmUpperTextColor">WindowText</Property>
+      <Property Name="ValueDecimalPlaces">0</Property>
+      <Property Name="AlarmLowerBkgColor">Salmon</Property>
+      <Property Name="ValueDisplay">Decimal</Property>
+      <Property Name="AlarmUpperBkgColor">IndianRed</Property>
+      <Property Name="AlarmLowerTextColor">WindowText</Property>
+      <Property Name="BoxFont">Microsoft Sans Serif, 8.142858pt, style=Bold, Italic</Property>
+      <Property Name="AlarmUpperFont">Microsoft Sans Serif, 8.142858pt, style=Bold, Italic</Property>
+      <Property Name="AlarmLowerFont">Microsoft Sans Serif, 8.142858pt, style=Bold, Italic</Property>
+      <Property Name="AlarmGeneralSettings">1;2;0;1</Property>
+      <Property Name="DisplayLabel">Left</Property>
+      <Property Name="TextFont">Microsoft Sans Serif, 8.142858pt, style=Bold, Italic</Property>
+      <Property Name="DescriptionText">Engine_Signal:</Property>
+      <Property Name="DescriptionSize">79, 16</Property>
+      <Property Name="SymbolConfiguration">5;1;Airbag;;;Env_Engine;1;;;-1;;;</Property>
+      <Property Name="TabIndex">0</Property>
+    </Object>
+    <Property Name="Name">Panel</Property>
+    <Property Name="Size">730, 341</Property>
+    <Property Name="BackColor">White</Property>
+  </Object>
+</Panel>
